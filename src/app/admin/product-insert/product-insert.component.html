@@ -1,0 +1,222 @@
+<div>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <app-sidebar></app-sidebar>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Insert product</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                    </div>
+                </div>
+
+                <form action="">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-sm">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>No Invoice</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="nama"  [(ngModel)]="form.nama" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td>
+                                        <textarea name="" id="" cols="30" rows="10"  class="form-control" name="deskripsi"  (input)="onValueChangeDeskripsi($event)"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kategori</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="kategori_id" [(ngModel)]="form.kategori_id">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Harga</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="harga" [(ngModel)]="form.harga">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="weight" [(ngModel)]="form.weight">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Panjang</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="panjang" [(ngModel)]="form.panjang">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Lebar</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="lebar" [(ngModel)]="form.lebar">
+                                    </td>
+                                </tr><tr>
+                                    <td>PL</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="pl" [(ngModel)]="form.pl">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Material</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="materials" [(ngModel)]="form.materials">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Warna</td>
+                                    <td>
+                                        <div class="form-control">
+                                            <div class="form-row">
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[0].Black" >
+                                                            <label class="form-check-label" for="exampleCheck2">Black</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[1].Blue" >
+                                                            <label class="form-check-label" for="exampleCheck2">Blue</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[2].Grey" >
+                                                            <label class="form-check-label" for="exampleCheck2">Grey</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[3].Purple" >
+                                                            <label class="form-check-label" for="exampleCheck2">Purple</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[4].Red" >
+                                                            <label class="form-check-label" for="exampleCheck2">Red</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[5].Green" >
+                                                            <label class="form-check-label" for="exampleCheck2">Green</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[6].White" >
+                                                            <label class="form-check-label" for="exampleCheck2">White</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="color1"  [(ngModel)]="form.color1[7].Maroon" >
+                                                            <label class="form-check-label" for="exampleCheck2">Maroon</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ukuran</td>
+                                    <td>
+                                        <div class="form-control">
+                                            <div class="form-row">
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="size1" [(ngModel)]="form.size1[0].S">
+                                                            <label class="form-check-label" for="exampleCheck2"> S </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="size1" [(ngModel)]="form.size1[1].M">
+                                                            <label class="form-check-label" for="exampleCheck2"> M </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="size1" [(ngModel)]="form.size1[2].L">
+                                                            <label class="form-check-label" for="exampleCheck2"> L </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck2" name="size1" [(ngModel)]="form.size1[3].XL">
+                                                            <label class="form-check-label" for="exampleCheck2"> XL </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Foto</td>
+                                    <td>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="d-flex flex-column">
+                                                    <div *ngFor="let item of listImage; let i = index">
+                                                        <div class="align-self-center p-2 bd-highlight" >
+                                                            <img class="card-img" [src]="item" alt="post image" />
+                                                            <button type="button" class="btn btn-primary btn-sm btn-block" (click)="removeImage(i)" >Hapus gambar</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="align-self-center p-2 bd-highlight">
+                                                        <input type="file" accept="image/*" (change)="selectFile($event)" />
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="saveData()">Simpan</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+</div>
